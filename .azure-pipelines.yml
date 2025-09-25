@@ -2,3 +2,11 @@ trigger:
   branches:
     include:
       - main # trigger pipeline on changes to main
+
+stage: Test
+displayName: Unit Test
+jobs: 
+  - job: Test
+  steps:
+    -script |
+      npm run build
